@@ -1,24 +1,45 @@
-//
-//  ContentView.swift
-//  PredatorsJP
-//
-//  Created by André Filipe Fonsêca Borba on 29/10/23.
-//
-
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+    @State private var selectedType: String = "All"
+    let predators = PredatorController()
+    
+    var filteredPredators: [PredatorModel] {
+        if selectedType == "All" {
+            return predators.predatorsData
+        } else {
+            return predators.predatorsData.filter { $0.type == selectedType }
         }
-        .padding()
+    }
+    
+    var body: some View {
+        NavigationView {
+            VStack {
+                Picker("Filter by Type", selection: $selectedType) {
+                    Text("All").tag("All")
+                    Text("Land").tag("land")
+                    Text("Sea").tag("sea")
+                    Text("Air").tag("air")
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                .padding()
+
+                List {
+                    ForEach(filteredPredators) { predator in
+                        NavigationLink(destination: PredatorDetailView(predator: predator)) {
+                            PredatorRowView(predator: predator)
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Jurassic Predators")
+        }
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .preferredColorScheme(.dark)
+    }
 }

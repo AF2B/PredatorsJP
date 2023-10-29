@@ -11,6 +11,11 @@
 		023E9B1A2AEEFA5100032762 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023E9B192AEEFA5100032762 /* ContentView.swift */; };
 		023E9B1C2AEEFA5200032762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 023E9B1B2AEEFA5200032762 /* Assets.xcassets */; };
 		023E9B1F2AEEFA5200032762 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 023E9B1E2AEEFA5200032762 /* Preview Assets.xcassets */; };
+		023E9B262AEEFC7100032762 /* jpapexpredators.json in Resources */ = {isa = PBXBuildFile; fileRef = 023E9B252AEEFC7100032762 /* jpapexpredators.json */; };
+		023E9B282AEEFD8200032762 /* PredatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023E9B272AEEFD8200032762 /* PredatorModel.swift */; };
+		023E9B2A2AEEFE8100032762 /* PredatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023E9B292AEEFE8100032762 /* PredatorController.swift */; };
+		023E9B2C2AEF034C00032762 /* PredatorRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023E9B2B2AEF034C00032762 /* PredatorRowView.swift */; };
+		023E9B2E2AEF0B4700032762 /* PredatorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023E9B2D2AEF0B4700032762 /* PredatorDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		023E9B192AEEFA5100032762 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		023E9B1B2AEEFA5200032762 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		023E9B1E2AEEFA5200032762 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		023E9B252AEEFC7100032762 /* jpapexpredators.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jpapexpredators.json; sourceTree = "<group>"; };
+		023E9B272AEEFD8200032762 /* PredatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredatorModel.swift; sourceTree = "<group>"; };
+		023E9B292AEEFE8100032762 /* PredatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredatorController.swift; sourceTree = "<group>"; };
+		023E9B2B2AEF034C00032762 /* PredatorRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredatorRowView.swift; sourceTree = "<group>"; };
+		023E9B2D2AEF0B4700032762 /* PredatorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredatorDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,11 @@
 		023E9B162AEEFA5100032762 /* PredatorsJP */ = {
 			isa = PBXGroup;
 			children = (
+				023E9B252AEEFC7100032762 /* jpapexpredators.json */,
+				023E9B292AEEFE8100032762 /* PredatorController.swift */,
+				023E9B272AEEFD8200032762 /* PredatorModel.swift */,
+				023E9B2D2AEF0B4700032762 /* PredatorDetailView.swift */,
+				023E9B2B2AEF034C00032762 /* PredatorRowView.swift */,
 				023E9B172AEEFA5100032762 /* PredatorsJPApp.swift */,
 				023E9B192AEEFA5100032762 /* ContentView.swift */,
 				023E9B1B2AEEFA5200032762 /* Assets.xcassets */,
@@ -127,6 +142,7 @@
 			files = (
 				023E9B1F2AEEFA5200032762 /* Preview Assets.xcassets in Resources */,
 				023E9B1C2AEEFA5200032762 /* Assets.xcassets in Resources */,
+				023E9B262AEEFC7100032762 /* jpapexpredators.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				023E9B2A2AEEFE8100032762 /* PredatorController.swift in Sources */,
 				023E9B1A2AEEFA5100032762 /* ContentView.swift in Sources */,
+				023E9B282AEEFD8200032762 /* PredatorModel.swift in Sources */,
 				023E9B182AEEFA5100032762 /* PredatorsJPApp.swift in Sources */,
+				023E9B2E2AEF0B4700032762 /* PredatorDetailView.swift in Sources */,
+				023E9B2C2AEF034C00032762 /* PredatorRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +295,7 @@
 				DEVELOPMENT_TEAM = 6MCTM986U8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "JP Predators";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +325,7 @@
 				DEVELOPMENT_TEAM = 6MCTM986U8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "JP Predators";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
